@@ -711,9 +711,6 @@ class BlogPost extends Page
     {
         parent::onBeforeWrite();
 
-        if (!$this->exists() && ($member = Member::currentUser())) {
-            $this->Authors()->add($member);
-        }
     }
 }
 

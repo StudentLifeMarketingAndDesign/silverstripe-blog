@@ -92,12 +92,12 @@ class BlogTag extends DataObject implements CategorisationObject
                 if($this->ID) {
                     $existing = $existing->exclude('ID', $this->ID);
                 }
-                if($existing->count() > 0) {
-                    $validation->error(_t(
-                        'BlogTag.Duplicate',
-                        'A blog tags already exists with that name'
-                    ), BlogTag::DUPLICATE_EXCEPTION);
-                }
+                // if($existing->count() > 0) {
+                //     $validation->error(_t(
+                //         'BlogTag.Duplicate',
+                //         'A blog tags already exists with that name'
+                //     ), BlogTag::DUPLICATE_EXCEPTION);
+                // }
             }
         }
         return $validation;
